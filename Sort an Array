@@ -1,0 +1,15 @@
+class Solution {
+    public int[] sortArray(int[] nums) {
+        int boss;
+        for(int i=0; i<nums.length-1; i++){            //no... of rounds
+            for(int j=0; j<nums.length-i-1; j++){
+                if(nums[j]>nums[j+1]){
+                    boss = nums[j];
+                    nums[j]=nums[j+1];
+                    nums[j+1]=boss;
+                }
+            }
+        }
+        return nums;    
+    }
+}
